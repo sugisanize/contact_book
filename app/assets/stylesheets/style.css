@@ -1,0 +1,148 @@
+/* ページ全体のスタイル */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* ヘッダーのスタイル */
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.header__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #f79da8;
+}
+
+.title a {
+  color: #f79da8;
+  text-decoration: none;
+}
+
+.user_nav {
+  text-align: right;
+}
+
+.lists-right li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.login,
+.sign-up,
+.user-childname,
+.logout {
+  color: #f79da8;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  background-color: #fff;
+  border: 2px solid #f79da8;
+}
+
+.login:hover,
+.sign-up:hover,
+.user-childname:hover,
+.logout:hover {
+  background-color: #f79da8;
+  color: #fff;
+}
+
+/* メインコンテンツのスタイル */
+.main-content {
+  max-width: 250px;
+  margin: 150px auto 50px;
+  padding: 0 20px;
+  background-color: #fff;
+  border-radius: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 50px;
+  transition: all 0.2s ease-in-out;
+  border: 10px solid #f79da8;
+}
+
+.main-content:hover,
+.new:hover {
+  background-color: #f79da8;
+  color: #fff;
+}
+
+.new {
+  text-decoration: none;
+  color: #f79da8;
+  transition: all 0.2s ease-in-out;
+  background-color: #fff;
+  justify-content: center;
+}
+
+/* フッターのスタイル */
+footer {
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* 追加スタイル */
+.user-childname {
+  color: #f79da8;
+}
+
+.user-nav::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.user-nav li:last-child {
+  margin-right: 0;
+}
+
+.user-nav li:first-child {
+  margin-left: 0;
+}
+
+@media (max-width: 767px) {
+  .header__bar {
+    display: block;
+  }
+}
+ 
+.title {
+    margin-top: 10px;
+}
+
+  
+ 
+.user_nav {
+  margin-top: 10px;
+}
