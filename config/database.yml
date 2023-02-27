@@ -19,7 +19,6 @@ development:
   username: root
   password:
   host: localhost
-  database: ajax_app_development
   database: contact_book_development
 
 # Warning: The database defined as "test" will be erased and
