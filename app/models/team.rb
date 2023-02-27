@@ -1,16 +1,13 @@
 class Team < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' },
-    { id: 2, name: 'つぼみ組' },
-    { id: 3, name: 'なのはな組' },
-    { id: 4, name: 'れんげ組' },
-    { id: 5, name: 'すみれ組' },
-    { id: 6, name: 'もも組' },
-    { id: 7, name: 'ひまわり組' },
-    { id: 8, name: 'チューリップ組' },
-    { id: 9, name: 'たんぽぽ組' },
-    { id: 10, name: 'きく組' },
-    { id: 11, name: 'さくら組' }
+    { id: 2, name: '０歳児クラス' },
+    { id: 3, name: '１歳児クラス' },
+    { id: 4, name: '２歳児クラス' },
+    { id: 5, name: '３歳児クラス' },
+    { id: 6, name: '４歳児クラス' },
+    { id: 7, name: '５歳児クラス' },
+    { id: 8, name: '６歳児クラス' }
   ]
 
   include ActiveHash::Associations
