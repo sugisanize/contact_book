@@ -14,21 +14,23 @@ ActiveRecord::Schema.define(version: 2023_02_25_054543) do
 
   create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.datetime "date", null: false
-    t.integer "temperature", null: false
-    t.datetime "bedtime", null: false
-    t.datetime "wakeuptime", null: false
+    t.string "temperature", null: false
+    t.string "bedtime", null: false
+    t.string "wakeuptime", null: false
     t.integer "defecationtimezone_id"
     t.integer "defecationquality_id"
     t.integer "bathing_id", null: false
     t.integer "mood_id", null: false
-    t.datetime "dinnertime"
+    t.string "dinnertime"
     t.string "dinner_content"
-    t.datetime "breakfasttime"
+    t.string "breakfasttime"
     t.string "breakfast_content"
-    t.datetime "picuptime"
+    t.string "picuptime"
     t.string "contact"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_contacts_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -49,4 +51,5 @@ ActiveRecord::Schema.define(version: 2023_02_25_054543) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "contacts", "users"
 end
