@@ -8,7 +8,7 @@ class Contact < ApplicationRecord
   belongs_to :user
 
   with_options presence: true do
-    validates :date
+    validates :contact_date
     validates :temperature, format: { with: /\A[0-9]{2}.[0-9]{1}\z/, message: 'is invalid. Include dot(.)' }
     validates :bedtime, format: { with: /\A[0-9]{2}:[0-9]{2}\z/, message: 'is invalid. Include colon(:)' }
     validates :wakeuptime, format: { with: /\A[0-9]{2}:[0-9]{2}\z/, message: 'is invalid. Include colon(:)' }

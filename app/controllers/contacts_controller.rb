@@ -2,7 +2,7 @@ class ContactsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
   def index
-    @contacts = Contact.all
+    @contacts = Contact.all.includes(:user).order("contact_date DESC")
   end
 
   def new
@@ -21,7 +21,7 @@ class ContactsController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:date, :temperature, :bedtime, :wakeuptime, :defecationtimezone_id, :defecationquality_id,
+    params.require(:contact).permit(:contact_date, :temperature, :bedtime, :wakeuptime, :defecationtimezone_id, :defecationquality_id,
                                     :bathing_id, :mood_id, :dinnertime, :dinner_content, :breakfasttime, :breakfast_content, :picuptime, :contact).merge(user_id: current_user.id)
   end
 end
