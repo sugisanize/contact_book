@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2023_02_25_054543) do
 
   create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.datetime "date", null: false
+    t.datetime "contact_date", null: false
     t.string "temperature", null: false
     t.string "bedtime", null: false
     t.string "wakeuptime", null: false

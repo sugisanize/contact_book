@@ -1,7 +1,7 @@
 class CreateContacts < ActiveRecord::Migration[6.0]
   def change
     create_table :contacts do |t|
-      t.datetime   :date,                  null: false
+      t.datetime   :contact_date,                  null: false
       t.string     :temperature,           null: false
       t.string     :bedtime,               null: false
       t.string     :wakeuptime,            null: false
