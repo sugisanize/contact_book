@@ -41,7 +41,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rubocop', require: false
-  gem 'pg'
 end
 
 group :test do
@@ -59,3 +58,7 @@ gem 'pry-rails'
 gem 'devise'
 gem 'pry-rails'
 gem 'active_hash'
+
+group :production do
+  gem 'pg'
+end
