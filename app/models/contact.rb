@@ -13,7 +13,7 @@ class Contact < ApplicationRecord
     validates :bedtime, format: { with: /\A[0-9]{2}:[0-9]{2}\z/, message: 'is invalid. Include colon(:)' }
     validates :wakeuptime, format: { with: /\A[0-9]{2}:[0-9]{2}\z/, message: 'is invalid. Include colon(:)' }
   end
-  
+
   validates :bathing_id, numericality: { other_than: 1, message: "can't be blank" }
   validates :mood_id, numericality: { other_than: 1, message: "can't be blank" }
   validates :dinnertime, format: { with: /\A[0-9]{2}:[0-9]{2}\z/, message: 'is invalid. Include colon(:)' }, allow_blank: true
