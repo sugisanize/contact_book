@@ -2,7 +2,7 @@ class ContactsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
   def index
-    @contacts = Contact.all.includes(:user).order("contact_date DESC")
+    @contacts = Contact.all.includes(:user).order('contact_date DESC')
   end
 
   def new
