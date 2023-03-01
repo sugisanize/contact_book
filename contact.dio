@@ -67,7 +67,7 @@
                 <mxCell id="25" value="ユーザー新規登録ページ" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
                     <mxGeometry x="170" y="640" width="140" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="26" value="ユーザーマイページ" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+                <mxCell id="26" value="ユーザー情報変更ページ" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
                     <mxGeometry x="170" y="692" width="140" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="27" value="連絡ページ" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
