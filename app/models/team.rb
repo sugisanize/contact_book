@@ -6,8 +6,7 @@ class Team < ActiveHash::Base
     { id: 4, name: '２歳児クラス' },
     { id: 5, name: '３歳児クラス' },
     { id: 6, name: '４歳児クラス' },
-    { id: 7, name: '５歳児クラス' },
-    { id: 8, name: '６歳児クラス' }
+    { id: 7, name: '５歳児クラス' }
   ]
 
   include ActiveHash::Associations
