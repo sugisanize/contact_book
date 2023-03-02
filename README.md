@@ -42,7 +42,7 @@ https://docs.google.com/spreadsheets/d/1Unw2Tatyjeyy3tH1Cav3cyIYqEqL2-_pTmADCD8F
 <br />
 
 # 実装予定の機能
-集金機能を実装予定。
+権限管理機能、集金機能、連絡帳データエクスポート機能を実装予定。
 <br />
 <br />
 
