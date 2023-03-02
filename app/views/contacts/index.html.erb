@@ -1,13 +1,16 @@
 <div class="main-content">
-  <a class="new" href="/contacts/new">連絡帳作成</a>
-</div>
-
-<div class="contents-row">
-  <% @contacts.each do |contact| %>
-    <% if user_signed_in? && current_user.id == contact.user_id %>
-      <div class="contact_date" >
-        ・<%= link_to contact.contact_date.strftime("%Y年%m月%d日%a"), "#" %>
-      </div>
+  <div class="create-contact-btn">
+    <a class="new" href="/contacts/new">連絡帳作成</a>
+  </div>
+  <div class="contents-row">
+    <% @contacts.each do |contact| %>
+      <% if user_signed_in? && current_user.id == contact.user_id %>
+        <div class="contact_dates" >
+          <div class="contact_date">
+            ・<%= link_to contact.contact_date.strftime("%Y年%m月%d日(%a)"), contact_path(contact.id) %>
+          </div>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
