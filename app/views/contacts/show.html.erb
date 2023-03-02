@@ -1,0 +1,80 @@
+<div class="contacts-contents">
+  <div class="contacts-main">
+    <h2 class="contacts-title"><%= @contact.contact_date.strftime("%Y年%m月%d日(%a)") %></h2>
+    <div class="contents_detail">
+      <%# 体温 %>
+      <div class="contacts-temperature">
+        <div class="weight-text">
+          体温
+        </div>
+        <p><%= @contact.temperature %> ℃</p>
+      </div>
+      <%# /体温 %>
+
+      <%# 家庭の様子 %>
+      <div class="contacts-detail">
+        <div class="weight-text">
+          <span>家庭の様子について</span>
+        </div>
+        <div class="form">
+          <div class="weight-bold-text">
+            ・睡眠
+          </div>
+          <p>就寝時間 <%= @contact.bedtime %></p>
+          <p>起床時間 <%= @contact.wakeuptime %></p>
+          <div class="weight-bold-text">
+            ・排便
+          </div>
+          <p>時間帯 <%= @contact.defecationtimezone.name %></p>
+          <p>質 <%= @contact.defecationquality.name %></p>
+          <div class="weight-bold-text">
+            ・入浴
+          </div>
+          <p><%= @contact.bathing.name %></p>
+          <div class="weight-bold-text">
+            ・機嫌
+          </div>
+          <p><%= @contact.mood.name %></p>
+          <div class="weight-bold-text">
+            ・夕食
+          </div>
+          <p>時間 <%= @contact.dinnertime %></p>
+          <p>食べた物 <%= @contact.dinner_content %></p>
+          <div class="weight-bold-text">
+            ・朝食
+          </div>
+          <p>時間 <%= @contact.breakfasttime %></p>
+          <p>食べた物 <%= @contact.breakfast_content %></p>
+        </div>
+      </div>
+      <%# お迎えの時間 %>
+      <div class="contacts-picuptime">
+        <div class="weight-text">
+          お迎えの時間
+        </div>
+        <p><%= @contact.picuptime %></p>
+      </div>
+      <%# /お迎えの時間 %>
+      <%# 連絡事項 %>
+      <div class="contacts-contact">
+        <div class="weight-text">
+          連絡事項、子どもの様子など
+        </div>
+        <p><%= @contact.contact %></p>
+      </div>
+      <%# /連絡事項 %>
+    </div>
+    <% if user_signed_in? && current_user.id = @contact.user_id %>
+      <div class="more">
+        <div class="more_lists">
+          <div class="more_list">
+            <%= link_to '編集', "#", method: :get %>
+          </div>
+          <div class="more_list">
+            <%= link_to '削除', "#", method: :delete %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

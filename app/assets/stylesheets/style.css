@@ -1,11 +1,6 @@
 /* ページ全体のスタイル */
 body {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
-  margin: 0;
-  padding: 0;
+  width: 100%;
   background-color: #f9f9f9;
 }
 
@@ -24,14 +19,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
-  padding: 0 20px;
+  height: 80px;
+  padding: 0 50px;
 }
 
 .title {
   font-size: 36px;
   font-weight: bold;
-  margin: 0;
+  margin-top: 10px;
   color: #f79da8;
 }
 
@@ -62,7 +57,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 10px;
   transition: all 0.2s ease-in-out;
   background-color: #fff;
   border: 2px solid #f79da8;
@@ -77,42 +72,62 @@ body {
 }
 
 /* メインコンテンツのスタイル */
+/* メインコンテンツ */
 .main-content {
-  max-width: 250px;
-  margin: 150px auto 50px;
-  padding: 0 20px;
-  background-color: #fff;
-  border-radius: 40px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-size: 50px;
-  transition: all 0.2s ease-in-out;
-  border: 10px solid #f79da8;
+  width: 100%;
+  margin-top: 80px;
+  padding-top: 50px;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.main-content:hover,
-.new:hover {
+/* 連絡帳作成ボタン */
+.create-contact-btn {
+  margin-bottom: 50px;
+
+}
+
+.create-contact-btn a {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #f79da8;
+  font-size: 50px;
+  font-weight: bold;
+  border: 10px solid #f79da8;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.create-contact-btn a:hover {
   background-color: #f79da8;
   color: #fff;
 }
 
-.new {
-  text-decoration: none;
-  color: #f79da8;
-  transition: all 0.2s ease-in-out;
-  background-color: #fff;
-  justify-content: center;
+/* コンテンツ行 */
+
+/* 連絡日 */
+
+.contact_date {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background-color: #f2f2f2;
+  color: #333333;
+  font-size: 21px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-.contents-row {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 40%;
+.contact_date a {
+  color: #333333;
+  text-decoration: none;
 }
 
-.contact_date a{
-  text-decoration: none;
-  font-size: 25px;
+.contact_date a:hover {
+  text-decoration: underline;
 }
 
 /* フッターのスタイル */
@@ -152,19 +167,13 @@ footer p {
   .header__bar {
     display: block;
   }
-}
- 
-.title {
-    margin-top: 10px;
-}
+} 
 
-  
- 
 .user_nav {
   margin-top: 10px;
 }
 
-/* 連絡帳新規作成スタイル */
+/* 連絡帳スタイル */
 .contacts-contents {
   display: flex;
   justify-content: center;
@@ -274,5 +283,29 @@ footer p {
 .back-btn {
   color: #333;
   font-size: 16px;
+  text-decoration: none;
+}
+
+.more_lists{
+  display: flex;
+  justify-content: space-between;
+}
+
+.more_list{
+  background-color: #ff6699;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  width: 30%;
+  text-align: center;
+}
+
+.more_list a {
+  color: #fff;
   text-decoration: none;
 }
