@@ -20,15 +20,32 @@ class ContactsController < ApplicationController
 
   def show
     @contact = Contact.find(params[:id])
+    if current_user.id != @contact.user_id
+      redirect_to root_path
+    end
   end
 
   def edit
     @contact = Contact.find(params[:id])
+    if current_user.id != @contact.user_id
+      redirect_to root_path
+    end
   end
 
   def update
     contact = Contact.find(params[:id])
     if contact.update(contact_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    contact = Contact.find(params[:id])
+    return unless current_user.id == contact.user_id
+
+    if contact.destroy
       redirect_to root_path
     else
       render :edit
