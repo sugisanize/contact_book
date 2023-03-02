@@ -1,0 +1,102 @@
+<div class="contacts-contents">
+  <div class="contacts-main">
+    <h2 class="contacts-title">連絡帳編集</h2>
+    <%= form_with model: @contact, local: true do |f| %>
+
+      <%= render 'shared/error_messages', model: f.object %>
+
+      <%# 連絡日 %>
+      <div class="new-contacts-date">
+        <div class="weight-text">
+          連絡日
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.date_select :contact_date, class:"contacts-date-select", id:"contact-date" %>
+      </div>
+      <%# /連絡日 %>
+
+      <%# 体温 %>
+      <div class="contacts-temperature">
+        <div class="weight-text">
+          体温
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :temperature, class:"contacts-number", id:"contact-temperature", placeholder:"例) 36.7" %> ℃
+      </div>
+      <%# /体温 %>
+
+      <%# 家庭の様子 %>
+      <div class="contacts-detail">
+        <div class="weight-text">
+          <span>家庭の様子について</span>
+        </div>
+        <div class="form">
+          <div class="weight-bold-text">
+            ・睡眠
+            <span class="indispensable">必須</span>
+          </div>
+          就寝時間
+          <%= f.text_field :bedtime, class:"contacts-number", id:"contact-bedtime", placeholder:"例) 20:00" %><br>
+          起床時間
+          <%= f.text_field :wakeuptime, class:"contacts-number", id:"contact-wakeuptime", placeholder:"例) 06:00" %>
+          <div class="weight-bold-text">
+            ・排便
+          </div>
+          時間帯
+          <%= f.collection_select(:defecationtimezone_id, Defecationtimezone.all, :id, :name, {}, {class:"select-box", id:"contact-defecationtimezone"}) %><br>
+          質
+          <%= f.collection_select(:defecationquality_id, Defecationquality.all, :id, :name, {}, {class:"select-box", id:"contact-defecationquality"}) %>
+          <div class="weight-bold-text">
+            ・入浴
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:bathing_id, Bathing.all, :id, :name, {}, {class:"select-box", id:"contact-bathing"}) %>
+          <div class="weight-bold-text">
+            ・機嫌
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:mood_id, Mood.all, :id, :name, {}, {class:"select-box", id:"contact-mood"}) %>
+          <div class="weight-bold-text">
+            ・夕食
+          </div>
+          時間
+          <%= f.text_field :dinnertime, class:"contacts-number", id:"contact-dinnertime", placeholder:"例) 18:00" %><br>
+          食べた物
+          <%= f.text_area :dinner_content, class:"contacts-content-text", id:"contact-dinner_content", placeholder:"例) カレー" %>
+          <div class="weight-bold-text">
+            ・朝食
+          </div>
+          時間
+          <%= f.text_field :breakfasttime, class:"contacts-number", id:"contact-breakfasttime", placeholder:"例) 07:00" %><br>
+          食べた物
+          <%= f.text_area :breakfast_content, class:"contacts-content-text", id:"contact-breakfast_content", placeholder:"例) ふりかけご飯、お味噌汁" %>
+        </div>
+      </div>
+      <%# お迎えの時間 %>
+      <div class="contacts-picuptime">
+        <div class="weight-text">
+          お迎えの時間
+        </div>
+        <%= f.text_field :picuptime, class:"contacts-number", id:"contact-picuptime", placeholder:"例) 17:45" %>
+      </div>
+      <%# /お迎えの時間 %>
+      <%# 連絡事項 %>
+      <div class="contacts-contact">
+        <div class="weight-text">
+          連絡事項、子どもの様子など
+        </div>
+        <%= f.text_area :contact, class:"contacts-contact-text", id:"contact" %>
+      </div>
+      <%# /連絡事項 %>
+
+      <%# 下部ボタン %>
+      <div class="sell-btn-contents">
+        <%= f.submit "確定" ,class:"sell-btn" %><br>
+      </div>
+      <div class="sell-btn-contents">
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
+      <%# /下部ボタン %>
+    <% end %>
+  </div>
+</div>

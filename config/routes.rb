@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "contacts#index"
   resources :users, only: [:edit, :update]
-  resources :contacts, only: [:index, :new, :create, :show]
+  resources :contacts, only: [:index, :new, :create, :show, :edit, :update]
 
 end
