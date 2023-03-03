@@ -107,7 +107,7 @@ RSpec.describe Contact, type: :model do
       it 'userが紐付いていないと作成できない' do
         @contact.user = nil
         @contact.valid?
-        expect(@contact.errors.full_messages).to include("User must exist")
+        expect(@contact.errors.full_messages).to include('User must exist')
       end
     end
   end

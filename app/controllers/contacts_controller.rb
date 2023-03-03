@@ -20,16 +20,17 @@ class ContactsController < ApplicationController
 
   def show
     @contact = Contact.find(params[:id])
-    if current_user.id != @contact.user_id
-      redirect_to root_path
-    end
+    @comment = Comment.new
+    return unless current_user.id != @contact.user_id
+
+    redirect_to root_path
   end
 
   def edit
     @contact = Contact.find(params[:id])
-    if current_user.id != @contact.user_id
-      redirect_to root_path
-    end
+    return unless current_user.id != @contact.user_id
+
+    redirect_to root_path
   end
 
   def update
