@@ -19,4 +19,5 @@ class Contact < ApplicationRecord
   validates :dinnertime, format: { with: /\A[0-9]{2}:[0-9]{2}\z/, message: 'is invalid. Include colon(:)' }, allow_blank: true
   validates :breakfasttime, format: { with: /\A[0-9]{2}:[0-9]{2}\z/, message: 'is invalid. Include colon(:)' }, allow_blank: true
   validates :picuptime, format: { with: /\A[0-9]{2}:[0-9]{2}\z/, message: 'is invalid. Include colon(:)' }, allow_blank: true
+  validates :contact_text, length: { maximum: 500 }
 end

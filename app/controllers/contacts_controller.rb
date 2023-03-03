@@ -56,6 +56,6 @@ class ContactsController < ApplicationController
 
   def contact_params
     params.require(:contact).permit(:contact_date, :temperature, :bedtime, :wakeuptime, :defecationtimezone_id, :defecationquality_id,
-                                    :bathing_id, :mood_id, :dinnertime, :dinner_content, :breakfasttime, :breakfast_content, :picuptime, :contact).merge(user_id: current_user.id)
+                                    :bathing_id, :mood_id, :dinnertime, :dinner_content, :breakfasttime, :breakfast_content, :picuptime, :contact_text).merge(user_id: current_user.id)
   end
 end

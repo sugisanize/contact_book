@@ -1,7 +1,7 @@
 class CreateContacts < ActiveRecord::Migration[6.0]
   def change
     create_table :contacts do |t|
-      t.datetime   :contact_date,                  null: false
+      t.datetime   :contact_date,          null: false
       t.string     :temperature,           null: false
       t.string     :bedtime,               null: false
       t.string     :wakeuptime,            null: false
@@ -14,7 +14,7 @@ class CreateContacts < ActiveRecord::Migration[6.0]
       t.string     :breakfasttime
       t.string     :breakfast_content
       t.string     :picuptime
-      t.string     :contact
+      t.text       :contact_text
       t.references :user,                  null: false, foreign_key: true
       t.timestamps
     end
