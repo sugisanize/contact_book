@@ -7,4 +7,5 @@ class Mood < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :contacts
+  has_many :comments
 end

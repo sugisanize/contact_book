@@ -6,6 +6,7 @@ class Contact < ApplicationRecord
   belongs_to :mood
 
   belongs_to :user
+  has_one :comment
 
   with_options presence: true do
     validates :contact_date

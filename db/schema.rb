@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_25_054543) do
+ActiveRecord::Schema.define(version: 2023_03_03_130203) do
+
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "sleepingstarttime"
+    t.string "sleepingendtime"
+    t.string "defecationtime"
+    t.integer "defecationquality_id"
+    t.integer "mood_id"
+    t.integer "lunchamount_id"
+    t.integer "snackamount_id"
+    t.text "comment_text"
+    t.bigint "contact_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["contact_id"], name: "index_comments_on_contact_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
 
   create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.datetime "contact_date", null: false
@@ -26,7 +43,7 @@ ActiveRecord::Schema.define(version: 2023_02_25_054543) do
     t.string "breakfasttime"
     t.string "breakfast_content"
     t.string "picuptime"
-    t.string "contact"
+    t.text "contact_text"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -51,5 +68,7 @@ ActiveRecord::Schema.define(version: 2023_02_25_054543) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "comments", "contacts"
+  add_foreign_key "comments", "users"
   add_foreign_key "contacts", "users"
 end
