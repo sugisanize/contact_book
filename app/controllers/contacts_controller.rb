@@ -15,7 +15,7 @@ class ContactsController < ApplicationController
     if @contact.save
       redirect_to root_path
     else
-      render :new
+      render template: "contacts/show"
     end
   end
 

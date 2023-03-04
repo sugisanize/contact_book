@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
   def index
     @users = User.all
-    # @users = team.users
-    @contact = Contact.find_by(params[:id])
   end
 
   def edit

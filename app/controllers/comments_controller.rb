@@ -1,6 +1,15 @@
 class CommentsController < ApplicationController
+  def index
+    @contacts = Contact.all.order('contact_date DESC')
+  end
+
   def create
-    Comment.create(comment_params)
+    @comment = Comment.new(comment_params)
+    if @comment.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
