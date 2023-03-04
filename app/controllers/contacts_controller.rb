@@ -3,6 +3,7 @@ class ContactsController < ApplicationController
 
   def index
     @contacts = Contact.all.includes(:user).order('contact_date DESC')
+    @teams = Team.all
   end
 
   def new

@@ -38,6 +38,7 @@ body {
 .conscept_message {
   color: #f79da8;
   font-weight: bold;
+  width: 500px;
 }
 
 .user_nav {
@@ -176,7 +177,7 @@ footer p {
 /* 連絡帳スタイル */
 .contacts-contents {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100%;
 }

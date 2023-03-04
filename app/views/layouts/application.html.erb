@@ -13,6 +13,9 @@
     <header class="header">
       <div class="header__bar row">
         <h1 class="title"><a href="/">ContactBook</a></h1>
+        <% unless user_signed_in? || admin_signed_in? %>
+          <%= link_to '管理者ログイン', new_admin_session_path, class: "login" %>
+        <% end %>
         <div class="conscept_message">
           子育てを頑張るあなたに<br>
           　子どもを預かるあなたに<br>
@@ -29,7 +32,6 @@
             <% else %>
               <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
               <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-              <li><%= link_to '管理者ログイン', new_admin_session_path, class: "login" %></li>
             <% end %>
           </div>
         </div>
