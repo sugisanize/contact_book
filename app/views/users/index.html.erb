@@ -1,0 +1,14 @@
+<div class="contacts-contents">
+  <div class="contacts-main">
+    <h2 class="contacts-title">児童一覧</h2>
+    <% if admin_signed_in? %>
+      <div class="contact_dates" >
+        <% @users.each do |user| %>
+          <div class="contact_date">
+            ・<%= link_to user.child_first_name, contact_path(@contact.id) %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @contacts = Contact.all.includes(:user).order('contact_date DESC')
@@ -22,9 +22,9 @@ class ContactsController < ApplicationController
   def show
     @contact = Contact.find(params[:id])
     @comment = Comment.new
-    return unless current_user.id != @contact.user_id
-
-    redirect_to root_path
+    unless (user_signed_in? && current_user.id == @contact.user_id) || admin_signed_in?
+      redirect_to root_path
+    end
   end
 
   def edit

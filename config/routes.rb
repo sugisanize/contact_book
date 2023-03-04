@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   }
   get 'contacts/index'
   root to: "contacts#index"
-  resources :users, only: [:edit, :update]
+  resources :users, only: [:index, :edit, :update]
   resources :contacts do
     resources :comments, only: :create
   end
