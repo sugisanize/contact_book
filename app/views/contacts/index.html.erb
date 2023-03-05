@@ -1,5 +1,12 @@
 <div class="main-content">
   <div class="contents-row">
+    <% unless user_signed_in? || admin_signed_in? %>
+      <div class="concept_message">
+        子育てを頑張るあなたに<br>
+        　子どもを預かるあなたに<br>
+        　　すくすく成長するあなたに
+      </div>
+    <% end %>
     <% if user_signed_in? %>
       <div class="create-contact-btn">
         <a class="new" href="/contacts/new">連絡帳作成</a>

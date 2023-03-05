@@ -16,12 +16,7 @@
         <% unless user_signed_in? || admin_signed_in? %>
           <%= link_to '管理者ログイン', new_admin_session_path, class: "login" %>
         <% end %>
-        <div class="conscept_message">
-          子育てを頑張るあなたに<br>
-          　子どもを預かるあなたに<br>
-          　　すくすく成長するあなたに
-        </div>
-        <div class="user_nav grid-6">
+        <div class="user_nav">
           <div class='lists-right'>
             <% if user_signed_in? %>
               <li><%= link_to current_user.child_first_name, edit_user_registration_path, class: "user-childname" %></li>

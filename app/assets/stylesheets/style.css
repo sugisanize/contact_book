@@ -35,12 +35,6 @@ body {
   text-decoration: none;
 }
 
-.conscept_message {
-  color: #f79da8;
-  font-weight: bold;
-  width: 500px;
-}
-
 .user_nav {
   text-align: right;
 }
@@ -77,12 +71,21 @@ body {
 .main-content {
   width: 100%;
   margin-top: 80px;
+  margin-bottom: 50px;
   padding-top: 50px;
   color: #333333;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* コンセプトメッセージ */
+.concept_message {
+  font-size: 500%;
+  color: #f79da8;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* 連絡帳作成ボタン */
