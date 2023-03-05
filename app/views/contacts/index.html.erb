@@ -21,8 +21,8 @@
         </div>
       <% end %>
     <% end %>
-    <% @teams.each do |team| %>
-      <% if admin_signed_in? %>
+    <% if admin_signed_in? %>
+      <% @teams.each do |team| %>
         <div class="create-contact-btn">
           <% if team.name != "---" %>
             <%= link_to team.name, users_path(team.id) %>
