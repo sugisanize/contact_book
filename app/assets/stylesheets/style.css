@@ -82,10 +82,12 @@ body {
 
 /* コンセプトメッセージ */
 .concept_message {
-  font-size: 500%;
+  font-size: 36px;
   color: #f79da8;
   font-weight: bold;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-top: 120px;
+  margin-bottom: 120px;
 }
 
 /* 連絡帳作成ボタン */
