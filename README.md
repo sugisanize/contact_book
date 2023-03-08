@@ -49,12 +49,12 @@ https://docs.google.com/spreadsheets/d/1Unw2Tatyjeyy3tH1Cav3cyIYqEqL2-_pTmADCD8F
 <br />
 
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/be42d42aab483b7742ccb2f2ddc9182f.png)](https://gyazo.com/be42d42aab483b7742ccb2f2ddc9182f)
+[![Image from Gyazo](https://i.gyazo.com/0cfe500f29d4174860a60de53801a3b5.png)](https://gyazo.com/0cfe500f29d4174860a60de53801a3b5)
 <br />
 <br />
 
 # 画面遷移図
-[![Image from Gyazo](https://i.gyazo.com/7ddd944e1904ad2ab802dbd78caa7b8f.png)](https://gyazo.com/7ddd944e1904ad2ab802dbd78caa7b8f)
+[![Image from Gyazo](https://i.gyazo.com/9b568ce82c8051720fccfec01d35cf17.png)](https://gyazo.com/9b568ce82c8051720fccfec01d35cf17)
 <br />
 <br />
 
