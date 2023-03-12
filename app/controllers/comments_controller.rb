@@ -20,6 +20,17 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    comment = Comment.find_by(params[:comment_id])
+    return unless current_admin.id == comment.admin_id
+
+    if comment.destroy
+      redirect_to action: :index
+    else
+      render @contact
+    end
+  end
+
   private
 
   def comment_params
