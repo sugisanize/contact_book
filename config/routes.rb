@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   root to: "contacts#index"
   resources :users, only: [:index, :edit, :update]
   resources :contacts do
-    resources :comments, only: [:index, :new, :create, :destroy]
+    resources :comments, only: [:index, :new, :create, :edit, :update, :destroy]
   end
 
 end

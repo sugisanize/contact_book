@@ -1,0 +1,62 @@
+<div class="contacts-contents">
+  <div class="contacts-main">
+    <h2 class="contacts-title">コメント編集</h2>
+    <%= form_with model: [@contact, @comment], local: true do |f| %>
+
+      <%= render 'shared/error_messages', model: f.object %>
+
+      <%# 園の様子 %>
+      <div class="contacts-detail">
+        <div class="weight-text">
+          <span>園での様子について</span>
+        </div>
+        <div class="form">
+          <div class="weight-bold-text">
+            ・睡眠
+          </div>
+          就寝時間
+          <%= f.text_field :sleepingstarttime, class:"contacts-number", id:"sleepingstarttime", placeholder:"例) 12:00" %><br>
+          起床時間
+          <%= f.text_field :sleepingendtime, class:"contacts-number", id:"sleepingendtime", placeholder:"例) 14:00" %>
+          <div class="weight-bold-text">
+            ・排便
+          </div>
+          時間帯
+          <%= f.text_field :defecationtime, class:"contacts-number", id:"defecationtime", placeholder:"例) 15" %> 時頃<br>
+          質
+          <%= f.collection_select(:defecationquality_id, Defecationquality.all, :id, :name, {}, {class:"select-box", id:"contact-defecationquality"}) %>
+          <div class="weight-bold-text">
+            ・機嫌
+          </div>
+          <%= f.collection_select(:mood_id, Mood.all, :id, :name, {}, {class:"select-box", id:"contact-mood"}) %>
+          <div class="weight-bold-text">
+            ・午前食
+          </div>
+          <%= f.collection_select(:lunchamount_id, Lunchamount.all, :id, :name, {}, {class:"select-box", id:"lunchamount"}) %>
+          <div class="weight-bold-text">
+            ・午後食
+          </div>
+          時間
+          <%= f.collection_select(:snackamount_id, Snackamount.all, :id, :name, {}, {class:"select-box", id:"snackamount"}) %>
+        </div>
+      </div>
+      <%# /園の様子 %>
+      <%# 連絡事項 %>
+      <div class="contacts-contact">
+        <div class="weight-text">
+          連絡事項、子どもの様子など
+        </div>
+        <%= f.text_area :comment_text, class:"contacts-contact-text", id:"comment" %>
+      </div>
+      <%# /連絡事項 %>
+      <%# 下部ボタン %>
+      <div class="sell-btn-contents">
+        <%= f.submit "コメント確定" ,class:"sell-btn" %><br>
+      </div>
+      <div class="sell-btn-contents">
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
+      <%# /下部ボタン %>
+    <% end %>
+  </div>
+</div>

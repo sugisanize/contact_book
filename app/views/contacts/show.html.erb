@@ -67,12 +67,15 @@
       <div class="more">
         <div class="more_lists">
           <div class="more_list">
-            <%= link_to '編集', edit_contact_path, method: :get %>
+            <%= link_to '編集', edit_contact_path %>
           </div>
           <div class="more_list">
             <%= link_to '削除', contact_path, method: :delete %>
           </div>
         </div>
+      </div>
+      <div class="sell-btn-contents">
+        <%=link_to 'もどる', contacts_path, class:"back-btn" %>
       </div>
     <% end %>
   </div>
@@ -130,12 +133,15 @@
         <div class="more">
           <div class="more_lists">
             <div class="more_list">
-              <%= link_to '編集', "#" %>
+              <%= link_to '編集', edit_contact_comment_path(:contact_id) %>
             </div>
             <div class="more_list">
               <%= link_to '削除', contact_comment_path(:contact_id), method: :delete %>
             </div>
           </div>
+        </div>
+        <div class="sell-btn-contents">
+          <%=link_to 'もどる', contact_comments_path(:contact_id), class:"back-btn" %>
         </div>
       <% end %>
     <% end%>

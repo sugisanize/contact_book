@@ -20,6 +20,20 @@ class CommentsController < ApplicationController
     end
   end
 
+  def edit
+    @contact = Contact.find_by(params[:id])
+    @comment = Comment.find_by(params[:comment_id])
+  end
+
+  def update
+    comment = Comment.find_by(params[:comment_id])
+    if comment.update(comment_params)
+      redirect_to action: :index
+    else
+      render :edit
+    end
+  end
+
   def destroy
     comment = Comment.find_by(params[:comment_id])
     return unless current_admin.id == comment.admin_id
