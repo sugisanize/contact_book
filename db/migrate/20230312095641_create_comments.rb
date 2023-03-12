@@ -10,7 +10,7 @@ class CreateComments < ActiveRecord::Migration[6.0]
       t.integer    :snackamount_id
       t.text       :comment_text
       t.references :contact,               null: false, foreign_key: true
-      t.references :user,                  null: false, foreign_key: true
+      t.references :admin,                 null: false, foreign_key: true
       t.timestamps
     end
   end

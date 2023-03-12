@@ -1,13 +1,11 @@
 <div class="main-content">
   <div class="contents-row">
-    <% if admin_signed_in? %>
-      <% @contacts.each do |contact| %>
-        <div class="contact_dates" >
-          <div class="contact_date">
-            ・<%= link_to contact.contact_date.strftime("%Y年%m月%d日(%a)"), contact_path(contact.id) %>
-          </div>
+    <% @contacts.each do |contact| %>
+      <div class="contact_dates" >
+        <div class="contact_date">
+          ・<%= link_to contact.contact_date.strftime("%Y年%m月%d日(%a)"), contact_path(contact.id) %>
         </div>
-      <% end %>
+      </div>
     <% end %>
   </div>
 </div>

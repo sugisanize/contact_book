@@ -10,7 +10,6 @@
         <p><%= @contact.temperature %> ℃</p>
       </div>
       <%# /体温 %>
-
       <%# 家庭の様子 %>
       <div class="contacts-detail">
         <div class="weight-text">
@@ -77,12 +76,16 @@
       </div>
     <% end %>
   </div>
-  <% if admin_signed_in? %>
-    <div class="contacts-main">
-      <%= form_with model: [@contact, @comment], local: true do |f| %>
-
-        <%= render 'shared/error_messages', model: f.object %>
-
+  <div class="contacts-main">
+    <% if admin_signed_in? && @comment.blank? %>
+      <div class="sell-btn-contents">
+        <%= link_to 'コメント作成', new_contact_comment_path(:contact_id), method: :get, class:"sell-btn" %>
+      </div>
+    <% elsif @comment.blank? %>
+      <h2 class="contacts-title">まだコメントはありません</h2>
+    <% else %>
+      <h2 class="contacts-title">コメント</h2>
+      <div class="contents_detail">
         <%# 園の様子 %>
         <div class="contacts-detail">
           <div class="weight-text">
@@ -92,30 +95,25 @@
             <div class="weight-bold-text">
               ・睡眠
             </div>
-            就寝時間
-            <%= f.text_field :sleepingstarttime, class:"contacts-number", id:"sleepingstarttime", placeholder:"例) 12:00" %><br>
-            起床時間
-            <%= f.text_field :sleepingendtime, class:"contacts-number", id:"sleepingendtime", placeholder:"例) 14:00" %>
+            <p>就寝時間 <%= @comment.sleepingstarttime %></p>
+            <p>起床時間 <%= @comment.sleepingendtime %></p>
             <div class="weight-bold-text">
               ・排便
             </div>
-            時間帯
-            <%= f.text_field :defecationtime, class:"contacts-number", id:"defecationtime", placeholder:"例) 15" %> 時頃<br>
-            質
-            <%= f.collection_select(:defecationquality_id, Defecationquality.all, :id, :name, {}, {class:"select-box", id:"contact-defecationquality"}) %>
+            <p>時間帯 <%= @comment.defecationtime %>時頃</p>
+            <p>質 <%= @comment.defecationquality.name %></p>
             <div class="weight-bold-text">
               ・機嫌
             </div>
-            <%= f.collection_select(:mood_id, Mood.all, :id, :name, {}, {class:"select-box", id:"contact-mood"}) %>
+            <p><%= @comment.mood.name %></p>
             <div class="weight-bold-text">
               ・午前食
             </div>
-            <%= f.collection_select(:lunchamount_id, Lunchamount.all, :id, :name, {}, {class:"select-box", id:"lunchamount"}) %>
+            <p><%= @comment.lunchamount.name %></p>
             <div class="weight-bold-text">
               ・午後食
             </div>
-            時間
-            <%= f.collection_select(:snackamount_id, Snackamount.all, :id, :name, {}, {class:"select-box", id:"snackamount"}) %>
+            <p><%= @comment.snackamount.name %></p>
           </div>
         </div>
         <%# /園の様子 %>
@@ -124,18 +122,22 @@
           <div class="weight-text">
             連絡事項、子どもの様子など
           </div>
-          <%= f.text_area :comment_text, class:"contacts-contact-text", id:"comment" %>
+          <p><%= @comment.comment_text %></p>
         </div>
         <%# /連絡事項 %>
-        <%# 下部ボタン %>
-        <div class="sell-btn-contents">
-          <%= f.submit "コメント確定" ,class:"sell-btn" %><br>
+      </div>
+      <% if admin_signed_in? %>
+        <div class="more">
+          <div class="more_lists">
+            <div class="more_list">
+              <%= link_to '編集', "#" %>
+            </div>
+            <div class="more_list">
+              <%= link_to '削除', "#" %>
+            </div>
+          </div>
         </div>
-        <div class="sell-btn-contents">
-          <%=link_to 'もどる', root_path, class:"back-btn" %>
-        </div>
-        <%# /下部ボタン %>
       <% end %>
-    </div>
-  <% end %>
+    <% end%>
+  </div>
 </div>

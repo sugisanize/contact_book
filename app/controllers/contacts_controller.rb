@@ -21,7 +21,7 @@ class ContactsController < ApplicationController
 
   def show
     @contact = Contact.find(params[:id])
-    @comment = Comment.new
+    @comment = @contact.comment
     unless (user_signed_in? && current_user.id == @contact.user_id) || admin_signed_in?
       redirect_to root_path
     end
