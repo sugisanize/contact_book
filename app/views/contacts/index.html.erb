@@ -1,16 +1,6 @@
 <div class="main-content">
   <div class="contents-row">
-    <% unless user_signed_in? || admin_signed_in? %>
-      <div class="concept_message">
-        <%= image_tag "background_image.png", class:"background_image" %>
-        <p>
-          子育てを頑張るあなたに<br>
-          　子どもを預かるあなたに<br>
-          　　すくすく成長するあなたに
-        </P>
-      </div>
-    <% end %>
-    <% if user_signed_in? %>
+    <% if user_signed_in? && !(current_user.admin?) %>
       <div class="create-contact-btn">
         <a class="new" href="/contacts/new">連絡帳作成</a>
       </div>
@@ -23,15 +13,23 @@
           <% end %>
         </div>
       <% end %>
-    <% end %>
-    <% if admin_signed_in? %>
+    <% elsif user_signed_in? && current_user.admin? %>
       <% @teams.each do |team| %>
         <div class="create-contact-btn">
           <% if team.name != "---" %>
-            <%= link_to team.name, users_path(team.id) %>
+            <%= link_to team.name, users_path(team) %>
           <% end %>
         </div>
       <% end %>
+    <% else %>
+      <div class="concept_message">
+        <%= image_tag "background_image.png", class:"background_image" %>
+        <p>
+          子育てを頑張るあなたに<br>
+          　子どもを預かるあなたに<br>
+          　　すくすく成長するあなたに
+        </P>
+      </div>
     <% end %>
   </div>
 </div>

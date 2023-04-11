@@ -80,7 +80,7 @@
     <% end %>
   </div>
   <div class="contacts-main">
-    <% if admin_signed_in? && @comment.blank? %>
+    <% if user_signed_in? && current_user.admin? && @comment.blank? %>
       <div class="sell-btn-contents">
         <%= link_to 'コメント作成', new_contact_comment_path(:contact_id), method: :get, class:"sell-btn" %>
       </div>
@@ -129,7 +129,7 @@
         </div>
         <%# /連絡事項 %>
       </div>
-      <% if admin_signed_in? %>
+      <% if user_signed_in? && current_user.admin? %>
         <div class="more">
           <div class="more_lists">
             <div class="more_list">

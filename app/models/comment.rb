@@ -5,7 +5,7 @@ class Comment < ApplicationRecord
   belongs_to :lunchamount
   belongs_to :snackamount
 
-  belongs_to :admin
+  belongs_to :user
   belongs_to :contact
 
   validates :sleepingstarttime, format: { with: /\A[0-9]{2}:[0-9]{2}\z/, message: 'is invalid. Include colon(:)' },

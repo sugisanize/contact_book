@@ -36,7 +36,7 @@ class CommentsController < ApplicationController
 
   def destroy
     comment = Comment.find_by(params[:comment_id])
-    return unless current_admin.id == comment.admin_id
+    return unless current_user.id == comment.user_id
 
     if comment.destroy
       redirect_to action: :index
@@ -49,11 +49,11 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:sleepingstarttime, :sleepingendtime, :defecationtime, :defecationquality_id, :mood_id, :lunchamount_id, :snackamount_id, :comment_text).merge(
-      contact_id: params[:contact_id], admin_id: current_admin.id
+      contact_id: params[:contact_id], user_id: current_user.id
     )
   end
 
   def redirect_root
-    redirect_to root_path unless admin_signed_in?
+    redirect_to root_path unless current_user.admin?
   end
 end

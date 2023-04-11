@@ -13,6 +13,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string  :last_name_kana,     null: false
       t.string  :first_name_kana,    null: false
       t.integer :status,             null: false, default: 0
+      t.boolean :admin,              null: false, default: false
 
       ## Recoverable
       t.string   :reset_password_token
