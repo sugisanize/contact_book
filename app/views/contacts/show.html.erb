@@ -63,7 +63,7 @@
       </div>
       <%# /連絡事項 %>
     </div>
-    <% if user_signed_in? && current_user.id = @contact.user_id %>
+    <% if user_signed_in? && current_user.id == @contact.user_id %>
       <div class="more">
         <div class="more_lists">
           <div class="more_list">
