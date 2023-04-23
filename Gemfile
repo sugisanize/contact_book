@@ -61,6 +61,7 @@ gem 'pry-rails'
 gem 'devise'
 gem 'pry-rails'
 gem 'active_hash'
+gem 'paranoia'
 
 group :production do
   gem 'pg'

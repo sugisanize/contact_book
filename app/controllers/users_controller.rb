@@ -19,6 +19,20 @@ class UsersController < ApplicationController
       render :edit
     end
   end
+  
+  def withdrawal
+    @user = User.find(current_user.id)
+  end
+
+  def destroy
+    user = User.find(current_user.id)
+
+    if user.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
+  end
 
   private
 

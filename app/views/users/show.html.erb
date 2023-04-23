@@ -45,6 +45,8 @@
       <%= link_to '編集', edit_user_registration_path, class:"register-red-btn" %>
     </div>
   </div>
-  
-  <%=link_to 'もどる', root_path %>
+  <div class='register-btn'>
+    <%=link_to 'もどる', root_path %>
+    <%=link_to '退会ページ', withdrawal_path(@user) %>
+  </div>
 </div>

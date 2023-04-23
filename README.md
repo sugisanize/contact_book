@@ -44,7 +44,7 @@ https://docs.google.com/spreadsheets/d/1Unw2Tatyjeyy3tH1Cav3cyIYqEqL2-_pTmADCD8F
 <br />
 
 # 実装予定の機能
-権限管理機能、集金機能、連絡帳データエクスポート機能を実装予定。
+集金機能、連絡帳データエクスポート機能を実装予定。
 <br />
 <br />
 
@@ -72,3 +72,4 @@ https://docs.google.com/spreadsheets/d/1Unw2Tatyjeyy3tH1Cav3cyIYqEqL2-_pTmADCD8F
 <br />
 
 # 工夫したポイント
+管理者機能、退会機能（論理削除）

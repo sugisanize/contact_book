@@ -24,4 +24,6 @@ class User < ApplicationRecord
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :team
+
+  acts_as_paranoid
 end

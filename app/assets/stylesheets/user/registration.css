@@ -1,7 +1,7 @@
 /* registration form styling */
 .registration-main {
   max-width: 500px;
-  margin: 70px auto 50px;
+  margin: 80px auto 50px;
   padding: 1px 30px;
   background-color: #f9e6e7;
   border-radius: 10px;
@@ -124,6 +124,11 @@
 .form-bottom-text span {
   color: #ff6699;
   font-weight: bold;
+}
+
+.register-btn {
+  display: flex;
+  justify-content: space-between;
 }
 
 .register-red-btn {
