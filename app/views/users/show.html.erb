@@ -1,0 +1,50 @@
+<div class='registration-main'>
+  <div class='form-wrap'>
+    <div class='form-header'>
+      <h1 class='form-header-text'>
+        アカウント情報
+      </h1>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">子どものお名前</label>
+      </div>
+      <%= @user.child_first_name %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">クラス</label>
+      </div>
+      <%= @user.team.name %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">メールアドレス</label>
+      </div>
+    <%= @user.email %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">お名前</label>
+      </div>
+      <div class='input-name-wrap'>
+        <%= @user.last_name %>
+        <%= @user.first_name %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">お名前カナ</label>
+      </div>
+      <div class='input-name-wrap'>
+        <%= @user.last_name_kana %>
+        <%= @user.first_name_kana %>
+      </div>
+    </div>
+    <div class='register-btn'>
+      <%= link_to '編集', edit_user_registration_path, class:"register-red-btn" %>
+    </div>
+  </div>
+  
+  <%=link_to 'もどる', root_path %>
+</div>

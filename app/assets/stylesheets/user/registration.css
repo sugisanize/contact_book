@@ -138,4 +138,8 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background;
+  text-align: center;
+  text-decoration: none;
+  align-self: center;
+  padding-top: 10px;
 }
