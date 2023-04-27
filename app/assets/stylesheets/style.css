@@ -182,12 +182,6 @@ footer p {
   margin-left: 0;
 }
 
-@media (max-width: 767px) {
-  .header__bar {
-    display: block;
-  }
-} 
-
 .user_nav {
   margin-top: 10px;
 }
@@ -332,4 +326,54 @@ footer p {
 .more_list a {
   color: #fff;
   text-decoration: none;
+}
+
+/* タブレット対応 */
+@media (max-width: 1024px) {
+  .header__bar {
+    display: block;
+  }
+  .inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .page-heading {
+    font-size: 24px;
+  }
+  .background_image{
+    width: 45%;
+  }
+  .concept_message p {
+    font-size: 30px;
+  }
+  .create-contact-btn a{
+    display: block;
+    margin: 10px;
+  }
+}
+
+ /* スマホ表示 */
+@media (max-width: 599px) {
+  .page-heading {
+    font-size: 20px;
+  }
+  .title {
+    font-size: 18px;
+  }
+  .login,
+  .sign-up,
+  .user-childname,
+  .logout {
+    font-size: 10px;
+  }
+  .background_image{
+    width: 50%;
+  }
+  .create-contact-btn a{
+    font-size: 20px;
+    display: block;
+  }
+  .concept_message p {
+    font-size: 14px;
+  }
 }
