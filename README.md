@@ -19,6 +19,14 @@ Basic認証ID：admin<br />
 Basic認証パスワード：3554
 <br />
 <br />
+管理者ID：sensei@sensei<br />
+管理者パスワード：sensei1111
+<br />
+<br />
+ユーザーID：zirou@zirou<br />
+ユーザーパスワード：zirou1111
+<br />
+<br />
 
 # 利用方法
 ### 連絡帳作成
@@ -44,17 +52,17 @@ https://docs.google.com/spreadsheets/d/1Unw2Tatyjeyy3tH1Cav3cyIYqEqL2-_pTmADCD8F
 <br />
 
 # 実装予定の機能
-集金機能、連絡帳データエクスポート機能を実装予定。
+招待機能、集金機能、連絡帳データエクスポート機能を実装予定。
 <br />
 <br />
 
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/0cfe500f29d4174860a60de53801a3b5.png)](https://gyazo.com/0cfe500f29d4174860a60de53801a3b5)
+[![Image from Gyazo](https://i.gyazo.com/7e28cf3ec15fa3fee9d099f4b70c7411.png)](https://gyazo.com/7e28cf3ec15fa3fee9d099f4b70c7411)
 <br />
 <br />
 
 # 画面遷移図
-[![Image from Gyazo](https://i.gyazo.com/9b568ce82c8051720fccfec01d35cf17.png)](https://gyazo.com/9b568ce82c8051720fccfec01d35cf17)
+[![Image from Gyazo](https://i.gyazo.com/5b18eb8c71e3668f8b4c0aaaed1890a3.png)](https://gyazo.com/5b18eb8c71e3668f8b4c0aaaed1890a3)
 <br />
 <br />
 

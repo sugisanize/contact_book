@@ -1,17 +1,17 @@
 <mxfile host="65bd71144e">
     <diagram id="kd0Yo29yYLFkwfyUS1k1" name="ページ1">
-        <mxGraphModel dx="813" dy="1498" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1398" dy="1881" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="2" value="usersテーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="310" width="270" height="180" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="child_first_name（string型,NOT NULL）&#10;class_id（integer型,NOT NULL）&#10;email（string型,NOT NULL,ユニーク制約）&#10;encrypted_password（string型,NOT NULL）&#10;last_name（string型,NOT NULL）&#10;first_name（string型,NOT NULL）&#10;last_name_kana（string型,NOT NULL）&#10;first_name_kana（string型,NOT NULL）&#10;admin（boolean型,NOT NUL,DEFAULT FALSE）" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="2" vertex="1">
+                <mxCell id="3" value="child_first_name（string型,NOT NULL）&#10;class_id（integer型,NOT NULL）&#10;email（string型,NOT NULL,ユニーク制約）&#10;encrypted_password（string型,NOT NULL）&#10;last_name（string型,NOT NULL）&#10;first_name（string型,NOT NULL）&#10;last_name_kana（string型,NOT NULL）&#10;first_name_kana（string型,NOT NULL）&#10;admin（boolean型,NOT NUL,DEFAULT FALSE）&#10;deleted_at（datetime型）" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="2" vertex="1">
                     <mxGeometry y="30" width="270" height="150" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="collectionsテーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
-                    <mxGeometry x="274" y="-120" width="280" height="90" as="geometry"/>
+                    <mxGeometry x="305" y="-120" width="280" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="5" value="title（string型,NOT NULL）&#10;price（integer型,NOT NULL）&#10;user_id（references型,NOT NULL,外部キー）" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="4" vertex="1">
                     <mxGeometry y="30" width="280" height="60" as="geometry"/>
@@ -23,9 +23,9 @@
                     <mxGeometry y="30" width="260" height="220" as="geometry"/>
                 </mxCell>
                 <mxCell id="9" value="commentsテーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
-                    <mxGeometry x="620" y="270" width="280" height="250" as="geometry"/>
+                    <mxGeometry x="620" y="280" width="280" height="250" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="sleepingtime（string型）&#10;defecationtime（string型）&#10;defecationquality_id（integer型）&#10;mood_id（integer型）&#10;lunchamount_id（integer型）&#10;snackamount_id （integer型）&#10;comment（text型）&#10;contact_id（references型,NOT NULL,外部キー）&#10;admin_id（references型,NOT NULL,外部キー）" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="9" vertex="1">
+                <mxCell id="10" value="sleepingtime（string型）&#10;defecationtime（string型）&#10;defecationquality_id（integer型）&#10;mood_id（integer型）&#10;lunchamount_id（integer型）&#10;snackamount_id （integer型）&#10;comment（text型）&#10;contact_id（references型,NOT NULL,外部キー）&#10;user_id（references型,NOT NULL,外部キー）" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="9" vertex="1">
                     <mxGeometry y="30" width="280" height="220" as="geometry"/>
                 </mxCell>
                 <mxCell id="15" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3" target="7" edge="1">
@@ -82,7 +82,7 @@
                 <mxCell id="32" value="コメントページ&lt;br&gt;（管理者のみ）" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
                     <mxGeometry x="700" y="870" width="140" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="33" value="ユーザ一覧ページ&lt;br&gt;（管理者のみ）" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+                <mxCell id="33" value="ユーザー一覧ページ&lt;br&gt;（管理者のみ）" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
                     <mxGeometry x="170" y="740" width="140" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="34" value="集金登録ページ&lt;br&gt;（管理者のみ）" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
@@ -227,10 +227,10 @@
                 <mxCell id="68" value="ユーザー情報編集ページ" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
                     <mxGeometry x="344" y="640" width="140" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="71" value="退会ページ" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+                <mxCell id="71" value="退会ページ" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
                     <mxGeometry x="344" y="690" width="140" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="74" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="68" target="71">
+                <mxCell id="74" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="68" target="71" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="340" y="740" as="sourcePoint"/>
                         <mxPoint x="530" y="860.5900000000001" as="targetPoint"/>
@@ -240,7 +240,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="75" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="26">
+                <mxCell id="75" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="26" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="320" y="769.5" as="sourcePoint"/>
                         <mxPoint x="330" y="680" as="targetPoint"/>
