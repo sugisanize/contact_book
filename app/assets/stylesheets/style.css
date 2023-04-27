@@ -104,8 +104,9 @@ body {
 
 /* 連絡帳作成ボタン */
 .create-contact-btn {
+  display: flexbox;
+  justify-content: space-around;
   margin-bottom: 50px;
-
 }
 
 .create-contact-btn a {

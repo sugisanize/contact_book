@@ -14,13 +14,14 @@
         </div>
       <% end %>
     <% elsif user_signed_in? && current_user.admin? %>
-      <% @teams.each do |team| %>
-        <div class="create-contact-btn">
-          <% if team.name != "---" %>
-            <%= link_to team.name, users_path(team) %>
-          <% end %>
-        </div>
-      <% end %>
+      <div class="create-contact-btn">
+        <%= link_to '０歳児', '/users/team/2' %>
+        <%= link_to '１歳児', '/users/team/3' %>
+        <%= link_to '２歳児', '/users/team/4' %>
+        <%= link_to '３歳児', '/users/team/5' %>
+        <%= link_to '４歳児', '/users/team/6' %>
+        <%= link_to '５歳児', '/users/team/7' %>
+      </div>
     <% else %>
       <div class="concept_message">
         <%= image_tag "background_illust.png", class:"background_image" %>
