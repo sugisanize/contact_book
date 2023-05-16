@@ -376,4 +376,8 @@ footer p {
   .concept_message p {
     font-size: 14px;
   }
+  .contacts-title {
+    font-size: 24px;
+    font-weight: 100;
+  }
 }
