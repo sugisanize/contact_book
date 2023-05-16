@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       render :edit
     end
   end
-  
+
   def withdrawal
     @user = User.find(current_user.id)
   end
