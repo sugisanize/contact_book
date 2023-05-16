@@ -333,19 +333,24 @@ footer p {
   .header__bar {
     display: block;
   }
+
   .inner {
     width: 90%;
     margin: 0 auto;
   }
+
   .page-heading {
     font-size: 24px;
   }
+
   .background_image{
     width: 45%;
   }
+
   .concept_message p {
     font-size: 30px;
   }
+
   .create-contact-btn a{
     display: block;
     margin: 10px;
@@ -357,25 +362,31 @@ footer p {
   .page-heading {
     font-size: 20px;
   }
+
   .title {
     font-size: 18px;
   }
+
   .login,
   .sign-up,
   .user-childname,
   .logout {
     font-size: 10px;
   }
+
   .background_image{
     width: 50%;
   }
+
   .create-contact-btn a{
     font-size: 20px;
     display: block;
   }
+
   .concept_message p {
     font-size: 14px;
   }
+  
   .contacts-title {
     font-size: 24px;
     font-weight: 100;
