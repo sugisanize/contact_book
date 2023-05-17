@@ -392,6 +392,10 @@ footer p {
     font-weight: 100;
   }
 
+  .weight-text {
+    font-size: 14px;
+  }
+
   .sell-btn {
     font-size: 15px;
   }
