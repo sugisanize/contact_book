@@ -375,7 +375,7 @@ footer p {
   }
 
   .background_image{
-    width: 50%;
+    width: 45%;
   }
 
   .create-contact-btn a{
@@ -384,7 +384,8 @@ footer p {
   }
 
   .concept_message p {
-    font-size: 14px;
+    font-size: 13px;
+    position: relative;
   }
 
   .contacts-title {
