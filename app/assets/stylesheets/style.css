@@ -378,14 +378,14 @@ footer p {
     width: 45%;
   }
 
-  .create-contact-btn a{
-    font-size: 20px;
-    display: block;
-  }
-
   .concept_message p {
     font-size: 13px;
     position: relative;
+  }
+  
+  .create-contact-btn a{
+    font-size: 20px;
+    display: block;
   }
 
   .contacts-title {
