@@ -70,7 +70,7 @@ https://docs.google.com/spreadsheets/d/1Unw2Tatyjeyy3tH1Cav3cyIYqEqL2-_pTmADCD8F
 ・Ruby<br />
 ・RubyonRails<br />
 ・Github<br />
-・render
+・render<br />
 ・TablePlus
 <br />
 <br />
