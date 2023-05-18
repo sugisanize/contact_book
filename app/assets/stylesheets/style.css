@@ -386,6 +386,7 @@ footer p {
   .create-contact-btn a{
     font-size: 20px;
     display: block;
+    text-align: center;
   }
 
   .contacts-title {
