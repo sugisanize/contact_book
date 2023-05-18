@@ -80,4 +80,4 @@ https://docs.google.com/spreadsheets/d/1Unw2Tatyjeyy3tH1Cav3cyIYqEqL2-_pTmADCD8F
 <br />
 
 # 工夫したポイント
-管理者機能、退会機能（論理削除）
+トップ画像をMidjourneyで生成、管理者機能、退会機能（論理削除）
