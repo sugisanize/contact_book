@@ -294,14 +294,8 @@ footer p {
 }
 
 .back-btn {
-  color: #fff;
-  background-color: #333;
   font-size: 14px;
-  text-decoration: none;
-  border: 2px solid #333;
-  border-radius: 5px;
-  margin-top: 50px;
-  padding: 5px;
+  margin-top: 30px;
 }
 
 .more_lists{
