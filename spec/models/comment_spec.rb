@@ -1,5 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before do
+    @comment = FactoryBot.build(:comment)
+  end
+
+  describe 'コメント作成' do
+    context 'コメント作成できるとき' do
+    end
+    context 'コメント作成できないとき' do
+    end
+  end
 end
