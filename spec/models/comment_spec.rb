@@ -2,7 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
   before do
-    @comment = FactoryBot.build(:comment)
+    user = FactoryBot.create(:user)
+    contact = FactoryBot.create(:contact)
+    @comment = FactoryBot.build(:comment, user_id: user.id, contact_id: contact.id)
   end
 
   describe 'コメント作成' do
