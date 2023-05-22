@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :comment do
     sleepingstarttime    { '12:00' }
     sleepingendtime      { '14:00' }
-    defecationtime       { '16:00' }
+    defecationtime       { '15' }
     defecationquality_id { '2' }
     mood_id              { '2' }
     lunchamount_id       { '2' }
