@@ -20,6 +20,10 @@ RSpec.describe Comment, type: :model do
         @comment.sleepingendtime = ''
         expect(@comment).to be_valid
       end
+      it 'defecationtimeが空でも作成できる' do
+        @comment.defecationtime = ''
+        expect(@comment).to be_valid
+      end
     end
     context 'コメント作成できないとき' do
     end
