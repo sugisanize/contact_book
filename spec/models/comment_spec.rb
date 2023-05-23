@@ -24,6 +24,10 @@ RSpec.describe Comment, type: :model do
         @comment.defecationtime = ''
         expect(@comment).to be_valid
       end
+      it 'defecationquality_idが1でも作成できる' do
+        @comment.defecationquality_id = '1'
+        expect(@comment).to be_valid
+      end
     end
     context 'コメント作成できないとき' do
     end
