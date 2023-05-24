@@ -40,6 +40,10 @@ RSpec.describe Comment, type: :model do
         @comment.snackamount_id = '1'
         expect(@comment).to be_valid
       end
+      it 'comment_textが空でも作成できる' do
+        @comment.comment_text = ''
+        expect(@comment).to be_valid
+      end
     end
     context 'コメント作成できないとき' do
     end
