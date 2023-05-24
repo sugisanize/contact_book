@@ -36,6 +36,10 @@ RSpec.describe Comment, type: :model do
         @comment.lunchamount_id = '1'
         expect(@comment).to be_valid
       end
+      it 'snackamount_idが1でも作成できる' do
+        @comment.snackamount_id = '1'
+        expect(@comment).to be_valid
+      end
     end
     context 'コメント作成できないとき' do
     end
