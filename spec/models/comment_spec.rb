@@ -56,6 +56,11 @@ RSpec.describe Comment, type: :model do
         @comment.valid?
         expect(@comment.errors.full_messages).to include('Sleepingendtime is invalid. Include colon(:)')
       end
+      it 'defecationtimeに半角数字1桁では作成できない' do
+        @comment.defecationtime = '9'
+        @comment.valid?
+        expect(@comment.errors.full_messages).to include('Defecationtime is invalid.')
+      end
     end
   end
 end
