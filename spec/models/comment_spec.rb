@@ -46,6 +46,11 @@ RSpec.describe Comment, type: :model do
       end
     end
     context 'コメント作成できないとき' do
+      it 'sleepingstarttimeにコロンが含まれていない文字では作成できない' do
+        @comment.sleepingstarttime = '1200'
+        @comment.valid?
+        expect(@comment.errors.full_messages).to include('Sleepingstarttime is invalid. Include colon(:)')
+      end
     end
   end
 end
