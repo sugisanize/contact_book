@@ -61,6 +61,11 @@ RSpec.describe Comment, type: :model do
         @comment.valid?
         expect(@comment.errors.full_messages).to include('Defecationtime is invalid.')
       end
+      it 'comment_textが501文字以上では作成できない' do
+        @comment.comment_text = Faker::Lorem.characters(number: 501)
+        @comment.valid?
+        expect(@comment.errors.full_messages).to include('Comment text is too long (maximum is 500 characters)')
+      end
     end
   end
 end
