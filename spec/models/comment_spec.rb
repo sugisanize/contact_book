@@ -66,6 +66,11 @@ RSpec.describe Comment, type: :model do
         @comment.valid?
         expect(@comment.errors.full_messages).to include('Comment text is too long (maximum is 500 characters)')
       end
+      it 'userが紐付いていないと作成できない' do
+        @comment.user = nil
+        @comment.valid?
+        expect(@comment.errors.full_messages).to include('User must exist')
+      end
     end
   end
 end
