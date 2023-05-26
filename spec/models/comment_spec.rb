@@ -71,6 +71,11 @@ RSpec.describe Comment, type: :model do
         @comment.valid?
         expect(@comment.errors.full_messages).to include('User must exist')
       end
+      it 'contactが紐付いていないと作成できない' do
+        @comment.contact = nil
+        @comment.valid?
+        expect(@comment.errors.full_messages).to include('Contact must exist')
+      end
     end
   end
 end
