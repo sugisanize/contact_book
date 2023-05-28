@@ -2,8 +2,8 @@ class CommentsController < ApplicationController
   before_action :redirect_root
 
   def index
-    user = User.find(params[:id])
-    @contacts = user.contacts.order('contact_date DESC')
+    @user = User.find(params[:id])
+    @contacts = @user.contacts.order('contact_date DESC')
   end
 
   def new
