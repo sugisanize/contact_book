@@ -361,6 +361,10 @@ footer p {
     font-size: 18px;
   }
 
+  .lists-right li {
+    margin-left: 10px;
+  }
+
   .login,
   .sign-up,
   .user-childname,
