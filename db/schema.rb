@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_23_154646) do
+ActiveRecord::Schema.define(version: 2023_05_31_124411) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "sleepingstarttime"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2023_04_23_154646) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "picupperson"
     t.index ["user_id"], name: "index_contacts_on_user_id"
   end
 
