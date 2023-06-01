@@ -72,22 +72,17 @@
           <%= f.text_area :breakfast_content, class:"contacts-content-text", id:"contact-breakfast_content", placeholder:"例) ふりかけご飯、お味噌汁" %>
         </div>
       </div>
-      <%# お迎えの時間 %>
+      <%# お迎え %>
       <div class="contacts-picuptime">
         <div class="weight-text">
-          お迎えの時間
+          お迎え
         </div>
-        <%= f.text_field :picuptime, class:"contacts-number", id:"contact-picuptime", placeholder:"例) 17:45" %>
-      </div>
-      <%# /お迎えの時間 %>
-      <%# お迎えのする人 %>
-      <div class="contacts-picupperson">
-        <div class="weight-text">
+          時間
+        <%= f.text_field :picuptime, class:"contacts-number", id:"contact-picuptime", placeholder:"例) 17:45" %><br>
           お迎えする人
-        </div>
         <%= f.text_field :picuperson, class:"contacts-number", id:"contact-picupperson", placeholder:"例) 母" %>
       </div>
-      <%# /お迎えのする人 %>
+      <%# /お迎え %>
       <%# 連絡事項 %>
       <div class="contacts-contact">
         <div class="weight-text">
