@@ -13,6 +13,7 @@ FactoryBot.define do
     breakfasttime         { '07:00' }
     breakfast_content     { 'ご飯、お味噌汁' }
     picuptime             { '17:00' }
+    picupperson           { '母' }
     contact_text          { 'よろしくお願いいたします。' }
     association :user
   end
