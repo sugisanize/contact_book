@@ -38,6 +38,10 @@ RSpec.describe Contact, type: :model do
         @contact.picuptime = ''
         expect(@contact).to be_valid
       end
+      it 'picuppersonが空でも作成できる' do
+        @contact.picupperson = ''
+        expect(@contact).to be_valid
+      end
       it 'contact_textが空でも作成できる' do
         @contact.contact_text = ''
         expect(@contact).to be_valid
