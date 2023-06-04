@@ -108,6 +108,11 @@ RSpec.describe Contact, type: :model do
         @contact.valid?
         expect(@contact.errors.full_messages).to include('Breakfasttime is invalid. Include colon(:)')
       end
+      it 'breakfast_contentが51文字以上では作成できない' do
+        @contact.breakfast_content = Faker::Lorem.characters(number: 51)
+        @contact.valid?
+        expect(@contact.errors.full_messages).to include('Breakfast content is too long (maximum is 50 characters)')
+      end
       it 'contact_textが501文字以上では作成できない' do
         @contact.contact_text = Faker::Lorem.characters(number: 501)
         @contact.valid?
