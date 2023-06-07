@@ -20,6 +20,9 @@ class User < ApplicationRecord
     validates :first_name_kana
   end
 
+  validates :telephonenumber, presence: true,
+                    numericality: { only_integer: true, greater_than_or_equal_to: 10, less_than_or_equal_to: 11 }
+
   has_many :contacts
 
   extend ActiveHash::Associations::ActiveRecordExtensions
