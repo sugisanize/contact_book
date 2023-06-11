@@ -20,8 +20,7 @@ class User < ApplicationRecord
     validates :first_name_kana
   end
 
-  validates :telephonenumber, presence: true,
-                    numericality: { only_integer: true, greater_than_or_equal_to: 10, less_than_or_equal_to: 11 }
+  validates :telephonenumber, presence: true, format: { with: /\A[0-9]{10,11}\z/ }
 
   has_many :contacts
 
