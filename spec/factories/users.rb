@@ -9,5 +9,6 @@ FactoryBot.define do
     first_name            { '太郎' }
     last_name_kana        { 'ヤマダ' }
     first_name_kana       { 'タロウ' }
+    telephonenumber       { '09012345678' }
   end
 end
