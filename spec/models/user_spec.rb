@@ -52,6 +52,11 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("First name kana can't be blank")
       end
+      it 'telephonenumberが空では登録できない' do
+        @user.telephonenumber = ''
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Telephonenumber can't be blank")
+      end
       it 'passwordとpassword_confirmationが不一致では登録できない' do
         @user.password = '123456'
         @user.password_confirmation = '654321'
