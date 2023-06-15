@@ -125,6 +125,11 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include('First name kana is invalid')
       end
+      it 'telephonenumberが9文字以下では登録できない' do
+        @user.telephonenumber = '090123456'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('Telephonenumber is invalid')
+      end
     end
   end
 end
