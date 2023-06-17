@@ -219,6 +219,13 @@ footer p {
   font-weight: 500;
   color: #ff6699;
   margin-top: 1px;
+  text-align: center;
+}
+
+.contacts-telephonenumber {
+  font-size: 20px;
+  font-weight: 100;
+  margin-top: 1px;
   margin-bottom: 30px;
   text-align: center;
 }
