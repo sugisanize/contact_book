@@ -1,6 +1,7 @@
 <div class="main-content">
   <div class="contents-row">
     <h2 class="contacts-title"><%= "#{@user.child_first_name}ちゃんの連絡帳" %></h2>
+    <h3 class="contacts-telephonenumber"><%= "（保護者連絡先：#{@user.telephonenumber}）" %></h3>
     <% @contacts.each do |contact| %>
       <div class="contact_dates" >
         <div class="contact_date">
