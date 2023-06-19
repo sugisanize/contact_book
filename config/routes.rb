@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     resources :comments, only: [:new, :create, :edit, :update, :destroy]
   end
   get 'users/:id/contacts', to: 'comments#index', as: 'comments'
+  resources :collections, only:[:create]
 
 end
