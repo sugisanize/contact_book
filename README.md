@@ -57,12 +57,12 @@ https://docs.google.com/spreadsheets/d/1Unw2Tatyjeyy3tH1Cav3cyIYqEqL2-_pTmADCD8F
 <br />
 
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/7e28cf3ec15fa3fee9d099f4b70c7411.png)](https://gyazo.com/7e28cf3ec15fa3fee9d099f4b70c7411)
+
 <br />
 <br />
 
 # 画面遷移図
-[![Image from Gyazo](https://i.gyazo.com/5b18eb8c71e3668f8b4c0aaaed1890a3.png)](https://gyazo.com/5b18eb8c71e3668f8b4c0aaaed1890a3)
+
 <br />
 <br />
 
